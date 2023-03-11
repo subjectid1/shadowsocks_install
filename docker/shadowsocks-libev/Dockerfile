@@ -38,7 +38,7 @@ RUN set -ex \
 	&& /root/v2ray-plugin.sh \
 	&& /root/xray-plugin.sh \
 	&& rm -f /root/v2ray-plugin.sh /root/xray-plugin.sh
-
+EXPOSE 80
 VOLUME /etc/shadowsocks-libev
 ENV TZ=Asia/Shanghai
 CMD [ "ss-server", "-c", "/etc/shadowsocks-libev/config.json" ]
