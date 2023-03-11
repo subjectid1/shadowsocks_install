@@ -41,7 +41,7 @@ RUN set -ex \
 	&& /root/v2ray-plugin.sh \
 	&& /root/xray-plugin.sh \
 	&& rm -f /root/v2ray-plugin.sh /root/xray-plugin.sh
-
+EXPOSE 80
 VOLUME /etc/shadowsocks-rust
 ENV TZ=Asia/Shanghai
 CMD [ "/usr/bin/ssservice", "server", "--log-without-time", "-c", "/etc/shadowsocks-rust/config.json" ]
