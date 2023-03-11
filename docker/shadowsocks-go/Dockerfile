@@ -17,5 +17,5 @@ RUN set -ex \
 
 ENV TZ=Asia/Shanghai
 VOLUME /etc/shadowsocks-go
-
+EXPOSE 80
 CMD [ "shadowsocks-server", "-c", "/etc/shadowsocks-go/config.json" ]
