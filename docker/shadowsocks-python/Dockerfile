@@ -18,5 +18,5 @@ RUN set -ex \
 
 COPY config_sample.json /etc/shadowsocks-python/config.json
 VOLUME /etc/shadowsocks-python
-
+EXPOSE 80
 CMD [ "ssserver", "-c", "/etc/shadowsocks-python/config.json" ]
